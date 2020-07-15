@@ -65,7 +65,7 @@ class jax_backend(object):
         """
         Provide the underlying tensor type.
         """
-        return np.array
+        return jax.interpreters.xla.DeviceArray
 
     def clip(self, tensor_in, min_value, max_value):
         """
